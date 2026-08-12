@@ -1,228 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Piyusha Bhadane | Portfolio</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Custom Configuration -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: "#08080d",
-            card: "#111118",
-            accent: "#a855f7",
-            pink: "#ec4899"
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"]
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #08080d;
-      color: white;
-      font-family: "Inter", sans-serif;
-    }
-
-    .gradient-text {
-      background: linear-gradient(90deg, #a855f7, #ec4899);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .glass {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .glow:hover {
-      box-shadow: 0 0 35px rgba(168, 85, 247, 0.15);
-      transform: translateY(-5px);
-    }
-
-    .glow {
-      transition: all 0.3s ease;
-    }
-  </style>
+  <meta
+    name="description"
+    content="Portfolio of Piyusha Bhadane - Computer Engineering student interested in UI/UX and frontend development."
+  >
 </head>
 
 <body>
 
   <!-- ================= NAVBAR ================= -->
 
-  <nav class="fixed top-0 left-0 w-full z-50 glass">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+  <header class="navbar">
 
-      <a href="#home" class="text-xl font-bold">
-        Piyusha<span class="gradient-text">.</span>
+    <div class="container nav-container">
+
+      <a href="#home" class="logo">
+        Piyusha<span>.</span>
       </a>
 
-      <div class="hidden md:flex gap-8 text-sm text-gray-300">
-        <a href="#home" class="hover:text-white transition">Home</a>
-        <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#skills" class="hover:text-white transition">Skills</a>
-        <a href="#projects" class="hover:text-white transition">Projects</a>
-        <a href="#experience" class="hover:text-white transition">Experience</a>
-        <a href="#contact" class="hover:text-white transition">Contact</a>
-      </div>
+      <button class="menu-btn" aria-label="Open menu">
+        ☰
+      </button>
 
-      <a
-        href="#contact"
-        class="hidden md:block px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:bg-gray-200 transition"
-      >
-        Let's Talk
-      </a>
+      <ul class="nav-links">
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
 
     </div>
-  </nav>
+
+  </header>
 
 
   <!-- ================= HERO ================= -->
 
-  <section
-    id="home"
-    class="min-h-screen flex items-center justify-center px-6 pt-20"
-  >
-    <div class="max-w-5xl mx-auto text-center">
+  <main>
 
-      <p class="text-purple-400 font-medium mb-5">
-        Hello, I'm
-      </p>
+    <section id="home" class="hero">
 
-      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight">
-        Piyusha Bhadane
-      </h1>
+      <div class="container">
 
-      <h2 class="text-2xl md:text-4xl font-semibold mt-4 text-gray-300">
-        Computer Engineering Student
-      </h2>
+        <div class="hero-content">
 
-      <p class="mt-6 max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
-        I create user-centered digital experiences by combining
-        <span class="text-white">UI/UX design</span>,
-        <span class="text-white">frontend development</span>,
-        and modern technologies.
-      </p>
-
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
-
-        <a
-          href="#projects"
-          class="px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition"
-        >
-          View My Projects
-        </a>
-
-        <a
-          href="#contact"
-          class="px-6 py-3 rounded-full border border-gray-700 hover:border-purple-500 transition"
-        >
-          Contact Me
-        </a>
-
-      </div>
-
-      <div class="mt-12 flex justify-center gap-4 text-sm text-gray-400">
-        <span>UI/UX</span>
-        <span>•</span>
-        <span>Frontend</span>
-        <span>•</span>
-        <span>Creative Technology</span>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= ABOUT ================= -->
-
-  <section id="about" class="py-24 px-6">
-
-    <div class="max-w-6xl mx-auto">
-
-      <div class="mb-12">
-        <p class="text-purple-400 uppercase tracking-widest text-sm">
-          About Me
-        </p>
-
-        <h2 class="text-4xl font-bold mt-2">
-          A little about me
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-10">
-
-        <div class="glass rounded-2xl p-8 glow">
-
-          <p class="text-gray-300 leading-8">
-            I'm a Computer Engineering student passionate about
-            UI/UX design and frontend development. I enjoy turning
-            ideas into intuitive and visually engaging digital
-            experiences.
+          <p class="hero-small">
+            Hi, I'm
           </p>
 
-          <p class="text-gray-400 leading-8 mt-5">
-            My work combines design thinking, technology, creativity,
-            and problem solving to create meaningful digital products.
+          <h1>
+            Piyusha Bhadane
+          </h1>
+
+          <h2>
+            Computer Engineering Student
+          </h2>
+
+          <p>
+            I enjoy designing interfaces, building websites,
+            and learning by working on real projects.
+            I'm especially interested in UI/UX and frontend development.
           </p>
+
+          <div class="hero-buttons">
+
+            <a href="#projects" class="btn btn-primary">
+              See my work
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              Get in touch
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="section-label">
+            About
+          </p>
+
+          <h2 class="section-title">
+            A little about me
+          </h2>
 
         </div>
 
 
-        <div class="glass rounded-2xl p-8 glow">
+        <div class="about-grid">
 
-          <h3 class="text-xl font-semibold mb-5">
-            Education
-          </h3>
+          <div class="about-text">
 
-          <div class="space-y-6">
+            <p>
+              I'm currently pursuing a B.E. in Computer Engineering
+              at Thadomal Shahani Engineering College.
+            </p>
 
-            <div>
-              <p class="font-semibold">
+            <p>
+              I like working on projects where design and technology
+              come together. I usually start with the user experience
+              and then think about how I can turn the idea into a working
+              interface.
+            </p>
+
+            <p>
+              Outside academics, I enjoy design, creative work,
+              participating in hackathons, and dancing.
+            </p>
+
+          </div>
+
+
+          <div class="about-details">
+
+            <h3>
+              Education
+            </h3>
+
+            <p>
+              <strong>
                 Thadomal Shahani Engineering College
-              </p>
-              <p class="text-gray-400">
-                B.E. Computer Engineering
-              </p>
-              <p class="text-sm text-purple-400 mt-1">
-                Aug 2024 – Present
-              </p>
+              </strong>
+              <br>
+              B.E. Computer Engineering
+              <br>
+              Aug 2024 – Present
+            </p>
+
+            <h3>
+              Previously
+            </h3>
+
+            <p>
+              Jai Bhavani Junior College
+              <br>
+              HSC – 80%
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills" class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="section-label">
+            Skills
+          </p>
+
+          <h2 class="section-title">
+            Things I work with
+          </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+          <div class="skill-box">
+
+            <h3>
+              Programming
+            </h3>
+
+            <div class="skill-list">
+
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">SQL</span>
+
             </div>
 
-            <div>
-              <p class="font-semibold">
-                Jai Bhavani Junior College
-              </p>
-              <p class="text-gray-400">
-                HSC – 80%
-              </p>
-              <p class="text-sm text-purple-400 mt-1">
-                Jun 2022 – Mar 2024
-              </p>
+          </div>
+
+
+          <div class="skill-box">
+
+            <h3>
+              Frontend
+            </h3>
+
+            <div class="skill-list">
+
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">JavaScript</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skill-box">
+
+            <h3>
+              Design
+            </h3>
+
+            <div class="skill-list">
+
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Canva</span>
+              <span class="skill-tag">Wireframing</span>
+              <span class="skill-tag">Prototyping</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skill-box">
+
+            <h3>
+              Tools
+            </h3>
+
+            <div class="skill-list">
+
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Generative AI</span>
+              <span class="skill-tag">Codex</span>
+
             </div>
 
           </div>
@@ -231,234 +289,384 @@
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
 
-  <!-- ================= SKILLS ================= -->
+    <!-- ================= PROJECTS ================= -->
 
-  <section id="skills" class="py-24 px-6 bg-black/20">
+    <section id="projects" class="section">
 
-    <div class="max-w-6xl mx-auto">
+      <div class="container">
 
-      <div class="mb-12">
-        <p class="text-purple-400 uppercase tracking-widest text-sm">
-          Skills
-        </p>
+        <div class="section-header">
 
-        <h2 class="text-4xl font-bold mt-2">
-          Tools & Technologies
-        </h2>
-      </div>
+          <p class="section-label">
+            Projects
+          </p>
 
+          <h2 class="section-title">
+            Some things I've worked on
+          </h2>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
-        <!-- Programming -->
-        <div class="glass rounded-2xl p-6 glow">
-
-          <h3 class="font-semibold text-lg mb-4">
-            Programming
-          </h3>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="skill">C++</span>
-            <span class="skill">Java</span>
-            <span class="skill">Python</span>
-            <span class="skill">SQL</span>
-          </div>
+          <p class="section-description">
+            A few projects where I explored product ideas,
+            user experience, and interface design.
+          </p>
 
         </div>
 
 
-        <!-- Frontend -->
-        <div class="glass rounded-2xl p-6 glow">
-
-          <h3 class="font-semibold text-lg mb-4">
-            Frontend
-          </h3>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">Tailwind CSS</span>
-            <span class="skill">JavaScript</span>
-          </div>
-
-        </div>
+        <div class="projects-grid">
 
 
-        <!-- Design -->
-        <div class="glass rounded-2xl p-6 glow">
+          <!-- QUICKCART -->
 
-          <h3 class="font-semibold text-lg mb-4">
-            Design
-          </h3>
+          <article class="project-card">
 
-          <div class="flex flex-wrap gap-2">
-            <span class="skill">Figma</span>
-            <span class="skill">Canva</span>
-            <span class="skill">Wireframing</span>
-            <span class="skill">Prototyping</span>
-          </div>
-
-        </div>
-
-
-        <!-- Tools -->
-        <div class="glass rounded-2xl p-6 glow">
-
-          <h3 class="font-semibold text-lg mb-4">
-            Tools
-          </h3>
-
-          <div class="flex flex-wrap gap-2">
-            <span class="skill">Git</span>
-            <span class="skill">GitHub</span>
-            <span class="skill">Generative AI</span>
-            <span class="skill">Codex</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= PROJECTS ================= -->
-
-  <section id="projects" class="py-24 px-6">
-
-    <div class="max-w-6xl mx-auto">
-
-      <div class="mb-12">
-        <p class="text-purple-400 uppercase tracking-widest text-sm">
-          Projects
-        </p>
-
-        <h2 class="text-4xl font-bold mt-2">
-          Things I've worked on
-        </h2>
-      </div>
-
-
-      <div class="grid md:grid-cols-3 gap-6">
-
-
-        <!-- QuickCart -->
-        <div class="glass rounded-2xl overflow-hidden glow">
-
-          <div class="h-48 bg-gradient-to-br from-purple-600/40 to-pink-600/30 flex items-center justify-center">
-
-            <span class="text-3xl font-bold">
+            <div class="project-image">
               QuickCart+
-            </span>
+            </div>
 
-          </div>
+            <div class="project-content">
 
-          <div class="p-6">
+              <p class="project-category">
+                UI/UX Design
+              </p>
 
-            <p class="text-sm text-purple-400 mb-2">
-              UI/UX • Product Design
-            </p>
+              <h3 class="project-title">
+                QuickCart+
+              </h3>
 
-            <h3 class="text-xl font-semibold">
-              Smart Grocery & Expense Management
-            </h3>
+              <p class="project-description">
+                A grocery and expense management app concept.
+                I worked on budgeting, pantry tracking,
+                meal planning, and the checkout experience.
+              </p>
 
-            <p class="text-gray-400 mt-3 leading-7">
-              A smart grocery and expense management platform
-              featuring budgeting, pantry tracking, meal planning,
-              checkout workflows, and personalized recommendations.
-            </p>
+              <a
+                href="https://poll-import-93200123.figma.site"
+                target="_blank"
+                class="project-link"
+              >
+                View project →
+              </a>
 
-            <a
-              href="https://poll-import-93200123.figma.site"
-              target="_blank"
-              class="inline-block mt-5 text-purple-400 hover:text-purple-300"
-            >
-              View Project →
-            </a>
+            </div>
 
-          </div>
-
-        </div>
+          </article>
 
 
-        <!-- BarterBridge -->
-        <div class="glass rounded-2xl overflow-hidden glow">
+          <!-- BARTERBRIDGE -->
 
-          <div class="h-48 bg-gradient-to-br from-blue-600/30 to-purple-600/40 flex items-center justify-center">
+          <article class="project-card">
 
-            <span class="text-3xl font-bold">
+            <div class="project-image">
               BarterBridge
-            </span>
+            </div>
 
-          </div>
+            <div class="project-content">
 
-          <div class="p-6">
+              <p class="project-category">
+                UI/UX Design
+              </p>
 
-            <p class="text-sm text-purple-400 mb-2">
-              UI/UX • Platform Design
-            </p>
+              <h3 class="project-title">
+                BarterBridge
+              </h3>
 
-            <h3 class="text-xl font-semibold">
-              Skill Exchange Platform
-            </h3>
+              <p class="project-description">
+                A skill exchange platform concept designed
+                around finding skills, managing profiles,
+                and sending exchange requests.
+              </p>
 
-            <p class="text-gray-400 mt-3 leading-7">
-              A community-driven skill exchange platform designed
-              around skill discovery, profile management, and
-              exchange request workflows.
-            </p>
+              <a
+                href="#"
+                class="project-link"
+              >
+                Project link coming soon →
+              </a>
 
-            <a
-              href="#"
-              class="inline-block mt-5 text-purple-400 hover:text-purple-300"
-            >
-              View Project →
-            </a>
+            </div>
 
-          </div>
-
-        </div>
+          </article>
 
 
-        <!-- FoodEasy -->
-        <div class="glass rounded-2xl overflow-hidden glow">
+          <!-- FOODEASY -->
 
-          <div class="h-48 bg-gradient-to-br from-pink-600/30 to-orange-500/30 flex items-center justify-center">
+          <article class="project-card">
 
-            <span class="text-3xl font-bold">
+            <div class="project-image">
               FoodEasy
-            </span>
+            </div>
+
+            <div class="project-content">
+
+              <p class="project-category">
+                UI/UX Design
+              </p>
+
+              <h3 class="project-title">
+                FoodEasy
+              </h3>
+
+              <p class="project-description">
+                A food ordering platform designed around
+                searching for food, customizing menus,
+                managing a cart, and completing checkout.
+              </p>
+
+              <a
+                href="https://sew-stomp-64402825.figma.site"
+                target="_blank"
+                class="project-link"
+              >
+                View project →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience" class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="section-label">
+            Experience
+          </p>
+
+          <h2 class="section-title">
+            What I've been involved in
+          </h2>
+
+        </div>
+
+
+        <div class="experience-list">
+
+
+          <!-- TSEC CODE CELL -->
+
+          <div class="experience-item">
+
+            <div class="experience-top">
+
+              <div>
+
+                <div class="experience-role">
+                  Senior Committee Head
+                </div>
+
+                <div class="experience-company">
+                  TSEC CODE CELL
+                </div>
+
+              </div>
+
+              <div class="experience-date">
+                Mar 2026 – Present
+              </div>
+
+            </div>
+
+            <p>
+              I help coordinate committee activities, work with
+              different departments, and help make sure events
+              and initiatives are properly executed.
+            </p>
 
           </div>
 
-          <div class="p-6">
 
-            <p class="text-sm text-purple-400 mb-2">
-              UI/UX • Web Design
+          <!-- GOOGLE -->
+
+          <div class="experience-item">
+
+            <div class="experience-top">
+
+              <div>
+
+                <div class="experience-role">
+                  Google Student Ambassador
+                </div>
+
+                <div class="experience-company">
+                  Google
+                </div>
+
+              </div>
+
+              <div class="experience-date">
+                Jul 2025 – Feb 2026
+              </div>
+
+            </div>
+
+            <p>
+              Represented Google programs on campus and helped
+              promote student engagement through workshops,
+              events, and community activities.
             </p>
 
-            <h3 class="text-xl font-semibold">
-              Food Ordering Platform
+          </div>
+
+
+          <!-- CSI -->
+
+          <div class="experience-item">
+
+            <div class="experience-top">
+
+              <div>
+
+                <div class="experience-role">
+                  Junior Committee Designer
+                </div>
+
+                <div class="experience-company">
+                  CSI TSEC
+                </div>
+
+              </div>
+
+              <div class="experience-date">
+                Apr 2025 – May 2026
+              </div>
+
+            </div>
+
+            <p>
+              Worked on event creatives and marketing materials
+              for committee activities.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="section-label">
+            More about me
+          </p>
+
+          <h2 class="section-title">
+            Beyond projects
+          </h2>
+
+        </div>
+
+
+        <div class="achievements-grid">
+
+
+          <div class="achievement-box">
+
+            <h3>
+              Hackathons
             </h3>
 
-            <p class="text-gray-400 mt-3 leading-7">
-              A responsive food ordering experience featuring food
-              search, menu customization, cart management, and
-              checkout workflows.
+            <p>
+              Participant – MockUpp Hackathon 3.0 (2026)
             </p>
 
+            <p>
+              Participant – MockUpp Hackathon 2.0 (2025)
+            </p>
+
+            <p>
+              Participant – CodeCraft Hackathon 2.0 (2025)
+            </p>
+
+          </div>
+
+
+          <div class="achievement-box">
+
+            <h3>
+              Dance
+            </h3>
+
+            <p>
+              Represented TSEC in 20+ inter-collegiate dance
+              competitions as a member of the college contingent
+              dance team.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section contact">
+
+      <div class="container">
+
+        <div class="contact-content">
+
+          <p class="section-label">
+            Contact
+          </p>
+
+          <h2 class="section-title">
+            Want to talk?
+          </h2>
+
+          <p class="contact-text">
+            Whether it's a project, collaboration, internship,
+            or just a conversation about tech and design,
+            feel free to reach out.
+          </p>
+
+
+          <div class="contact-links">
+
+            <a href="mailto:bhadanepiyusha04@gmail.com">
+              Email
+            </a>
+
             <a
-              href="https://sew-stomp-64402825.figma.site"
+              href="https://www.linkedin.com/"
               target="_blank"
-              class="inline-block mt-5 text-purple-400 hover:text-purple-300"
             >
-              View Project →
+              LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/bhadanepiyusha"
+              target="_blank"
+            >
+              GitHub
             </a>
 
           </div>
@@ -467,257 +675,23 @@
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
-
-  <!-- ================= EXPERIENCE ================= -->
-
-  <section id="experience" class="py-24 px-6 bg-black/20">
-
-    <div class="max-w-6xl mx-auto">
-
-      <div class="mb-12">
-        <p class="text-purple-400 uppercase tracking-widest text-sm">
-          Experience
-        </p>
-
-        <h2 class="text-4xl font-bold mt-2">
-          Where I've contributed
-        </h2>
-      </div>
-
-
-      <div class="space-y-6">
-
-
-        <!-- TSEC -->
-        <div class="glass rounded-2xl p-7 glow">
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-3">
-
-            <div>
-              <h3 class="text-xl font-semibold">
-                Senior Committee Head
-              </h3>
-
-              <p class="text-purple-400">
-                TSEC CODE CELL
-              </p>
-            </div>
-
-            <span class="text-gray-500">
-              Mar 2026 – Present
-            </span>
-
-          </div>
-
-          <ul class="mt-5 text-gray-400 space-y-2">
-            <li>• Led committee operations and coordinated technical events across multiple departments.</li>
-            <li>• Managed teams and ensured successful execution of college initiatives and activities.</li>
-          </ul>
-
-        </div>
-
-
-        <!-- Google -->
-        <div class="glass rounded-2xl p-7 glow">
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-3">
-
-            <div>
-              <h3 class="text-xl font-semibold">
-                Google Student Ambassador
-              </h3>
-
-              <p class="text-purple-400">
-                Google
-              </p>
-            </div>
-
-            <span class="text-gray-500">
-              Jul 2025 – Feb 2026
-            </span>
-
-          </div>
-
-          <p class="mt-5 text-gray-400 leading-7">
-            Represented Google programs on campus and promoted
-            student engagement through workshops, events, and
-            community outreach.
-          </p>
-
-        </div>
-
-
-        <!-- CSI -->
-        <div class="glass rounded-2xl p-7 glow">
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-3">
-
-            <div>
-              <h3 class="text-xl font-semibold">
-                Junior Committee Designer
-              </h3>
-
-              <p class="text-purple-400">
-                CSI TSEC
-              </p>
-            </div>
-
-            <span class="text-gray-500">
-              Apr 2025 – May 2026
-            </span>
-
-          </div>
-
-          <p class="mt-5 text-gray-400 leading-7">
-            Designed event creatives and marketing materials that
-            improved committee visibility and student participation.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= ACHIEVEMENTS ================= -->
-
-  <section class="py-24 px-6">
-
-    <div class="max-w-6xl mx-auto">
-
-      <div class="mb-12">
-
-        <p class="text-purple-400 uppercase tracking-widest text-sm">
-          Achievements
-        </p>
-
-        <h2 class="text-4xl font-bold mt-2">
-          Beyond academics
-        </h2>
-
-      </div>
-
-
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <div class="glass rounded-2xl p-7 glow">
-
-          <h3 class="text-xl font-semibold mb-5">
-            Hackathons
-          </h3>
-
-          <div class="space-y-4 text-gray-400">
-
-            <p>
-              <span class="text-white">Participant</span>
-              – MockUpp Hackathon 3.0 (2026)
-            </p>
-
-            <p>
-              <span class="text-white">Participant</span>
-              – MockUpp Hackathon 2.0 (2025)
-            </p>
-
-            <p>
-              <span class="text-white">Participant</span>
-              – CodeCraft Hackathon 2.0 (2025)
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="glass rounded-2xl p-7 glow">
-
-          <h3 class="text-xl font-semibold mb-5">
-            Dance
-          </h3>
-
-          <p class="text-gray-400 leading-7">
-            Represented TSEC in 20+ inter-collegiate dance
-            competitions as a member of the college contingent
-            dance team.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= CONTACT ================= -->
-
-  <section id="contact" class="py-24 px-6 bg-black/20">
-
-    <div class="max-w-4xl mx-auto text-center">
-
-      <p class="text-purple-400 uppercase tracking-widest text-sm">
-        Contact
-      </p>
-
-      <h2 class="text-4xl md:text-5xl font-bold mt-3">
-        Let's build something
-        <span class="gradient-text">great.</span>
-      </h2>
-
-      <p class="text-gray-400 mt-6 max-w-xl mx-auto">
-        I'm always open to interesting projects, collaborations,
-        internships, and opportunities to learn and grow.
-      </p>
-
-
-      <div class="mt-10 flex flex-wrap justify-center gap-4">
-
-        <a
-          href="mailto:bhadanepiyusha04@gmail.com"
-          class="px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition"
-        >
-          Email Me
-        </a>
-
-        <a
-          href="#"
-          target="_blank"
-          class="px-6 py-3 rounded-full border border-gray-700 hover:border-purple-500 transition"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          href="#"
-          target="_blank"
-          class="px-6 py-3 rounded-full border border-gray-700 hover:border-purple-500 transition"
-        >
-          GitHub
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+  </main>
 
 
   <!-- ================= FOOTER ================= -->
 
-  <footer class="border-t border-white/10 py-8 px-6">
+  <footer class="footer">
 
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-3 text-sm text-gray-500">
+    <div class="container footer-container">
 
       <p>
-        © 2026 Piyusha Bhadane. All rights reserved.
+        © <span id="year"></span> Piyusha Bhadane
       </p>
 
       <p>
-        Built with HTML + Tailwind CSS
+        Built with HTML, CSS & Tailwind CSS
       </p>
 
     </div>
@@ -725,24 +699,10 @@
   </footer>
 
 
-  <!-- ================= SMALL JAVASCRIPT ================= -->
+  <!-- ================= JAVASCRIPT ================= -->
 
-  <script>
-    const skills = document.querySelectorAll(".skill");
-
-    skills.forEach(skill => {
-      skill.classList.add(
-        "px-3",
-        "py-1",
-        "rounded-full",
-        "bg-white/5",
-        "border",
-        "border-white/10",
-        "text-sm",
-        "text-gray-300"
-      );
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
