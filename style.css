@@ -931,4 +931,133 @@ section {
 
 }
 ```
+```css
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.about-text {
+  max-width: 680px;
+}
+
+.about-lead {
+  font-size: 1.45rem !important;
+  line-height: 1.6;
+  color: #e5e5e5 !important;
+  margin-bottom: 30px !important;
+}
+
+.about-text p {
+  color: #9a9a9a;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.about-text strong {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.about-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.about-interests span {
+  padding: 8px 13px;
+  border: 1px solid #2a2a2a;
+  background: #121216;
+  border-radius: 6px;
+  color: #a0a0a0;
+  font-size: 0.8rem;
+  transition: all 0.25s ease;
+}
+
+.about-interests span:hover {
+  border-color: #a855f7;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.about-details {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.about-detail-card {
+  padding: 25px;
+  background: #121216;
+  border: 1px solid #242424;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.about-detail-card:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.about-detail-card:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.about-detail-card:hover {
+  border-color: #444;
+  transform: translateX(4px);
+}
+
+.detail-label {
+  color: #a855f7 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  margin-bottom: 8px !important;
+}
+
+.about-detail-card h3 {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 5px;
+}
+
+.about-detail-card p:not(.detail-label) {
+  color: #8a8a8a;
+  font-size: 0.88rem;
+  margin-bottom: 5px;
+}
+
+.about-detail-card span {
+  color: #666;
+  font-size: 0.75rem;
+}
+
+/* =========================
+   ABOUT MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+```
 
